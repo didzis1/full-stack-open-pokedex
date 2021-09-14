@@ -50,7 +50,7 @@ jobs:
           WITH_V: true
 
       - name: Send Slack Notification
-        if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message, ' '), '#skip') }}
+        if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message, ' '), '#skip') && success() || failure() }}
         uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
