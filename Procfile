@@ -1,1 +1,1 @@
-web: npm run breaking-on-purpose
+web: npm run start-prod
