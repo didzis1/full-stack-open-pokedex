@@ -3,8 +3,9 @@ on:
     branches: [test_branch]
 
 jobs:
-  steps:
-    - name: Check the deployed service URL
-      uses: jtalk/url-health-check-action@v2
-      with:
-        url: https://example.com|http://example.com
+  check_site_health:
+    steps:
+      - name: Check the deployed service URL
+        uses: jtalk/url-health-check-action@v2
+        with:
+          url: https://example.com|http://example.com
