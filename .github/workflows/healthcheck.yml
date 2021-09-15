@@ -1,0 +1,10 @@
+on:
+  push:
+    branches: [test_branch]
+
+job:
+  steps:
+    - name: Check the deployed service URL
+      uses: jtalk/url-health-check-action@v2
+      with:
+        url: https://example.com|http://example.com
