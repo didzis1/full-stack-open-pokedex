@@ -1,6 +1,7 @@
 on:
-  push:
-    branches: [test_branch]
+  schedule:
+    # runs every 10 minutes
+    - cron: '10 * * * *'
 
 jobs:
   check_site_health:
